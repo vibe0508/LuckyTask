@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<string>remote</string>
+		<key>name</key>
+		<string>Very beautiful image</string>
+		<key>date</key>
+		<date>2018-03-13T07:37:40Z</date>
+		<key>url</key>
+		<string>https://www.aircraftcompare.com/aircraft_images/485.jpg</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>bundled</string>
+		<key>name</key>
+		<string>An image</string>
+		<key>date</key>
+		<date>2018-03-13T07:37:40Z</date>
+		<key>fileName</key>
+		<string>pilatus.jpg</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>local</string>
+		<key>name</key>
+		<string>An image</string>
+		<key>date</key>
+		<date>2018-03-13T07:37:40Z</date>
+		<key>path</key>
+		<string>/Users/blblblblb</string>
+	</dict>
+</array>
+</plist>

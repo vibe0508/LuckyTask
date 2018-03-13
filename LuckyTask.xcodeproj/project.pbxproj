@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1190F82320580C93004A7947 /* Images.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 11CB268C2057B68A0080AEEF /* Images.plist */; };
+		1190F82420580C93004A7947 /* pilatus.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 11CB268D2057B97A0080AEEF /* pilatus.jpg */; };
 		11CB26862057B4EE0080AEEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CB26852057B4EE0080AEEF /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		11CB26802057B4EE0080AEEF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				1190F82320580C93004A7947 /* Images.plist in CopyFiles */,
+				1190F82420580C93004A7947 /* pilatus.jpg in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
