@@ -10,6 +10,11 @@
 		1190F82320580C93004A7947 /* Images.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 11CB268C2057B68A0080AEEF /* Images.plist */; };
 		1190F82420580C93004A7947 /* pilatus.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 11CB268D2057B97A0080AEEF /* pilatus.jpg */; };
 		11CB26862057B4EE0080AEEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CB26852057B4EE0080AEEF /* main.m */; };
+		274CC76D2058128A00392B76 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CC76C2058128A00392B76 /* Image.m */; };
+		274CC770205826DC00392B76 /* ImageWithPath.h in Sources */ = {isa = PBXBuildFile; fileRef = 274CC76F205826DC00392B76 /* ImageWithPath.h */; };
+		274CC7722058281F00392B76 /* ImageWithPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CC7712058281F00392B76 /* ImageWithPath.m */; };
+		274CC775205829CB00392B76 /* ImageWithUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CC774205829CB00392B76 /* ImageWithUrl.m */; };
+		274CC778205829F700392B76 /* ImageWithFileName.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CC777205829F700392B76 /* ImageWithFileName.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +36,14 @@
 		11CB26852057B4EE0080AEEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11CB268C2057B68A0080AEEF /* Images.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		11CB268D2057B97A0080AEEF /* pilatus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pilatus.jpg; sourceTree = "<group>"; };
+		274CC76C2058128A00392B76 /* Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		274CC76E205813E500392B76 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		274CC76F205826DC00392B76 /* ImageWithPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageWithPath.h; sourceTree = "<group>"; };
+		274CC7712058281F00392B76 /* ImageWithPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageWithPath.m; sourceTree = "<group>"; };
+		274CC773205829CB00392B76 /* ImageWithUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageWithUrl.h; sourceTree = "<group>"; };
+		274CC774205829CB00392B76 /* ImageWithUrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageWithUrl.m; sourceTree = "<group>"; };
+		274CC776205829F700392B76 /* ImageWithFileName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageWithFileName.h; sourceTree = "<group>"; };
+		274CC777205829F700392B76 /* ImageWithFileName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageWithFileName.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +77,14 @@
 			isa = PBXGroup;
 			children = (
 				11CB26852057B4EE0080AEEF /* main.m */,
+				274CC76F205826DC00392B76 /* ImageWithPath.h */,
+				274CC7712058281F00392B76 /* ImageWithPath.m */,
+				274CC773205829CB00392B76 /* ImageWithUrl.h */,
+				274CC774205829CB00392B76 /* ImageWithUrl.m */,
+				274CC776205829F700392B76 /* ImageWithFileName.h */,
+				274CC777205829F700392B76 /* ImageWithFileName.m */,
+				274CC76E205813E500392B76 /* Image.h */,
+				274CC76C2058128A00392B76 /* Image.m */,
 				11CB268C2057B68A0080AEEF /* Images.plist */,
 				11CB268D2057B97A0080AEEF /* pilatus.jpg */,
 			);
@@ -128,6 +149,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CB26862057B4EE0080AEEF /* main.m in Sources */,
+				274CC770205826DC00392B76 /* ImageWithPath.h in Sources */,
+				274CC778205829F700392B76 /* ImageWithFileName.m in Sources */,
+				274CC7722058281F00392B76 /* ImageWithPath.m in Sources */,
+				274CC775205829CB00392B76 /* ImageWithUrl.m in Sources */,
+				274CC76D2058128A00392B76 /* Image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3NRJ5W5TPS;
+				DEVELOPMENT_TEAM = 7LT752HSAG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,7 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3NRJ5W5TPS;
+				DEVELOPMENT_TEAM = 7LT752HSAG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
