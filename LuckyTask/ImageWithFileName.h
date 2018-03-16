@@ -8,8 +8,6 @@
 
 - (NSString *)fileName;
 
--(id)initWithName:(NSString*)inputName Type:(NSString*)inputType Date:(NSDate*)inputDate fileName:(NSString*)inputFileName;
-
 @end
 
 

@@ -15,15 +15,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSMutableArray *images = [NSMutableArray arrayWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"]];
-
-        NSString *name  = [images[0] objectForKey: @"name"];
-        NSString *type  = [images[0] objectForKey: @"type"];
-        NSDate *date = [images[0] objectForKey: @"date"];
-        NSString *url = [images[0] objectForKey: @"url"];
         
-        ImageWithUrl * imageWithUrl = [[ImageWithUrl alloc] initWithName:name Type:type Date:date url: url];
-
-            [imageWithUrl showLocation: url];
+        Image * image = [Image imageWithDict:images.firstObject];
 
     }
     return 0;

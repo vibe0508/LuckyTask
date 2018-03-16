@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Image.h"
-
+#import "ImageWithUrl.m"
 
 @implementation Image
 
@@ -35,6 +35,23 @@
     name = inputName;
     type = inputType;
     date = inputDate;
+    return self;
+}
+
++ (id)imageWithDict:(NSDictionary *)dict {
+    NSString *type = dict[@"type"];
+    
+    if ([type isEqualToString:@"remote"]) {
+        return [[ImageWithUrl alloc] initWithDict:dict];
+    }
+    
+    return nil;
+}
+
+- (id)initWithDict:(NSDictionary *)dict {
+    if (self = [super init]) {
+        //тут интим общие проперти
+    }
     return self;
 }
 

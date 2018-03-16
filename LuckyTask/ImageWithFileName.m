@@ -9,12 +9,10 @@
     return fileName;
 }
 
--(id)initWithName:(NSString*)inputName Type:(NSString*)inputType Date:(NSDate*)inputDate fileName:(NSString*)inputFileName {
-    name = inputName;
-    type = inputType;
-    date = inputDate;
-    fileName = inputFileName;
-    return self;
+- (id)initWithDict:(NSDictionary *)dict {
+    if (self = [super initWithDict:dict]) {
+        //тут инитим проперти только для этого класса
+    }
 }
 
 @end

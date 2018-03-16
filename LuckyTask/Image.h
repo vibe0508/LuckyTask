@@ -11,10 +11,9 @@
 - (NSString *)name;
 - (NSDate *) date;
 
--(id)initWithName:(NSString*)name Type:(NSString*)type Date:(NSDate*)date;
-
 -(void)showLocation:( NSString *)location;
 
-
++ (id)imageWithDict:(NSDictionary*)dict;
+- (id)initWithDict:(NSDictionary*)dict;
 
 @end
