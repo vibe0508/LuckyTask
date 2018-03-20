@@ -2,13 +2,9 @@
 #import <Foundation/Foundation.h>
 #import "Image.h"
 
-@interface ImageWithFileName : Image {
-    NSString * fileName;
-}
+@interface ImageWithFileName : Image
 
-- (NSString *)fileName;
-
--(id)initWithName:(NSString*)inputName Type:(NSString*)inputType Date:(NSDate*)inputDate fileName:(NSString*)inputFileName;
+@property (copy, nonatomic) NSString *fileName;
 
 @end
 

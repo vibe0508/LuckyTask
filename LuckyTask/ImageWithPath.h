@@ -2,11 +2,9 @@
 #import <Foundation/Foundation.h>
 #import "Image.h"
 
-@interface ImageWithPath : Image {
-    NSString * path;
-}
-- (NSString *)path;
+@interface ImageWithPath : Image
 
--(id)initWithName:(NSString*)inputName Type:(NSString*)inputType Date:(NSDate*)inputDate path:(NSString*)inputPath;
+@property (copy, nonatomic) NSString *path;
 
 @end
+

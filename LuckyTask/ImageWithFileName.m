@@ -5,16 +5,8 @@
 
 @implementation ImageWithFileName
 
-- (NSString *)fileName {
-    return fileName;
-}
-
--(id)initWithName:(NSString*)inputName Type:(NSString*)inputType Date:(NSDate*)inputDate fileName:(NSString*)inputFileName {
-    name = inputName;
-    type = inputType;
-    date = inputDate;
-    fileName = inputFileName;
-    return self;
+-(NSString *)fileName {
+    return self.location;
 }
 
 @end

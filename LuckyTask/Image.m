@@ -8,35 +8,38 @@
 
 #import <Foundation/Foundation.h>
 #import "Image.h"
+#import "ImageWithUrl.h"
+#import "ImageWithPath.h"
+#import "ImageWithFileName.h"
+
+
 
 
 @implementation Image
 
-- (NSString *)name {
-    return name;
+-(instancetype) initNewImageWithLocation: (NSDictionary *) image {
+    Image *currentImage;
+
+
+    if ([image objectForKey: @"url"]) {
+        currentImage = [ImageWithUrl new];
+        currentImage.location = [image valueForKey: @"url"];
+
+    } else if ([image objectForKey: @"fileName"]) {
+        currentImage = [ImageWithFileName new];
+        currentImage.location = [image valueForKey: @"fileName"];
+
+    } else if ([image objectForKey: @"path"]) {
+        currentImage = [ImageWithPath new];
+        currentImage.location = [image valueForKey: @"path"];
+    }
+    currentImage.name  = [image valueForKey: @"name"];
+    currentImage.type   = [image valueForKey: @"type"];
+    currentImage.date = [image valueForKey: @"date"];
+
+    return currentImage;
 }
 
-- (NSString *)type {
-    return type;
-}
-
-- (NSDate *)date {
-    return date;
-}
-
--(void)showLocation:( NSString *)location {
-    NSLog( @"location is %@", location);
-
-}
-
--(id)initWithName:(NSString*)inputName Type:(NSString*)inputType Date:(NSDate*)inputDate {
-    if (!(self = [super init]))
-        return nil;
-    name = inputName;
-    type = inputType;
-    date = inputDate;
-    return self;
-}
 
 @end
 
