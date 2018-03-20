@@ -25,20 +25,17 @@
     if ([type isEqualToString:@"remote"]) {
         currentImage = [[ImageWithUrl alloc] initWithDict:dict];
         currentImage.location = [dict valueForKey: @"url"];
-        return currentImage;
     }
     if ([type isEqualToString:@"bundled"]) {
         currentImage = [[ImageWithFileName alloc] initWithDict:dict];
         currentImage.location = [dict valueForKey: @"fileName"];
-        return currentImage;
     }
     if ([type isEqualToString:@"local"]) {
         currentImage = [[ImageWithPath alloc] initWithDict:dict];
         currentImage.location = [dict valueForKey: @"path"];
-        return currentImage;
     }
 
-    return nil;
+    return currentImage;
 }
 
 - (id)initWithDict:(NSDictionary *)dict {
