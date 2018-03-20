@@ -9,7 +9,8 @@
 @property (copy, nonatomic) NSString *location;
 
 
--(instancetype) initNewImageWithLocation: (NSDictionary *) image;
++ (id)imageWithDict:(NSDictionary*)dict;
+- (id)initWithDict:(NSDictionary*)dict;
 
 @end
 

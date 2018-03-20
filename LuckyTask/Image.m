@@ -17,29 +17,38 @@
 
 @implementation Image
 
--(instancetype) initNewImageWithLocation: (NSDictionary *) image {
+
++ (id)imageWithDict:(NSDictionary *)dict {
     Image *currentImage;
+    NSString *type = dict[@"type"];
 
-
-    if ([image objectForKey: @"url"]) {
-        currentImage = [ImageWithUrl new];
-        currentImage.location = [image valueForKey: @"url"];
-
-    } else if ([image objectForKey: @"fileName"]) {
-        currentImage = [ImageWithFileName new];
-        currentImage.location = [image valueForKey: @"fileName"];
-
-    } else if ([image objectForKey: @"path"]) {
-        currentImage = [ImageWithPath new];
-        currentImage.location = [image valueForKey: @"path"];
+    if ([type isEqualToString:@"remote"]) {
+        currentImage = [[ImageWithUrl alloc] initWithDict:dict];
+        currentImage.location = [dict valueForKey: @"url"];
+        return currentImage;
     }
-    currentImage.name  = [image valueForKey: @"name"];
-    currentImage.type   = [image valueForKey: @"type"];
-    currentImage.date = [image valueForKey: @"date"];
+    if ([type isEqualToString:@"bundled"]) {
+        currentImage = [[ImageWithFileName alloc] initWithDict:dict];
+        currentImage.location = [dict valueForKey: @"fileName"];
+        return currentImage;
+    }
+    if ([type isEqualToString:@"local"]) {
+        currentImage = [[ImageWithPath alloc] initWithDict:dict];
+        currentImage.location = [dict valueForKey: @"path"];
+        return currentImage;
+    }
 
-    return currentImage;
+    return nil;
 }
 
+- (id)initWithDict:(NSDictionary *)dict {
+    if (self = [super init]) {
+        self.name = [dict valueForKey: @"name"];
+        self.type = [dict valueForKey: @"type"];
+        self.date = [dict valueForKey: @"date"];
+    }
+    return self;
+}
 
 @end
 

@@ -16,13 +16,10 @@ int main(int argc, const char * argv[]) {
 
         NSArray *images = [NSArray arrayWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"]];
 
-        Image *image = [Image new];
-
         for (int i = 0; i < images.count; i++) {
-            Image * curentImg = [image initNewImageWithLocation: images[i]];
+            Image * curentImg = [Image imageWithDict:images[i]];
             NSLog(@"location: %@", curentImg.location);
         }
-
     }
 
     return 0;
